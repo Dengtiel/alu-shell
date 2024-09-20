@@ -61,3 +61,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Deletes the file `betty` from `/tmp/my_first_directory`.
 - **Command Used**: `rm /tmp/my_first_directory/betty`
 
+### 9-firstdirdeletion
+- **Description**: Deletes the directory `my_first_directory` from `/tmp/`.
+- **Command Used**: `rmdir /tmp/my_first_directory`
+
+
