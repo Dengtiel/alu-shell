@@ -57,3 +57,7 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Moves the file `betty` from `/tmp/` to `/tmp/my_first_directory/`.
 - **Command Used**: `mv /tmp/betty /tmp/my_first_directory/`
 
+### 8-firstdelete
+- **Description**: Deletes the file `betty` from `/tmp/my_first_directory`.
+- **Command Used**: `rm /tmp/my_first_directory/betty`
+
