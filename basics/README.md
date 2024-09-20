@@ -27,4 +27,6 @@ This directory contains scripts that perform basic shell operations. Each script
 ### 5-create_directory
 - **Description**: Creates a new directory named my_dir  in the current working directory.
 - **Command Used**: mkdir my_dir
-
+### 1-listit
+- **Description**: Displays the contents of the current directory.
+- **Command Used**: ls
