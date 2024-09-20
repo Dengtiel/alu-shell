@@ -53,4 +53,7 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Creates a directory named my_first_directory  in the /tmp/  directory.
 - **Command Used**: mkdir /tmp/my_first_directory
 
+### 7-movethatfile
+- **Description**: Moves the file `betty` from `/tmp/` to `/tmp/my_first_directory/`.
+- **Command Used**: `mv /tmp/betty /tmp/my_first_directory/`
 
