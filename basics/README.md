@@ -27,9 +27,15 @@ This directory contains scripts that perform basic shell operations. Each script
 ### 5-create_directory
 - **Description**: Creates a new directory named my_dir  in the current working directory.
 - **Command Used**: mkdir my_dir
+
 ### 1-listit
 - **Description**: Displays the contents of the current directory.
 - **Command Used**: ls
+
 ### 2-bring_me_home
 - **Description**: Changes the working directory to the user's home directory.
 - **Command Used**:  cd ~
+
+### 3-listfiles
+- **Description**: Displays the contents of the current directory in long format.
+- **Command Used**: ls -l
