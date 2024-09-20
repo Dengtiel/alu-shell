@@ -44,7 +44,13 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Displays the contents of the current directory, including hidden files, in long format.
 - **Command Used**: ls -la
 
+
 ### 5-listfilesdigitonly
 - **Description**: Displays the contents of the current directory in long format, including hidden files, with numeric user and group IDs.
 - **Command Used**: ls -lan
+
+### 6-firstdirectory
+- **Description**: Creates a directory named my_first_directory  in the /tmp/  directory.
+- **Command Used**: mkdir /tmp/my_first_directory
+
 
