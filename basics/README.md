@@ -30,3 +30,6 @@ This directory contains scripts that perform basic shell operations. Each script
 ### 1-listit
 - **Description**: Displays the contents of the current directory.
 - **Command Used**: ls
+### 2-bring_me_home
+- **Description**: Changes the working directory to the user's home directory.
+- **Command Used**:  cd ~
