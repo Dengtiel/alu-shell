@@ -30,11 +30,11 @@ This directory contains scripts that perform basic shell operations. Each script
 
 ### 1-listit
 - **Description**: Displays the contents of the current directory.
-- **Command Used**: ls
+- **Command Used**:s
 
 ### 2-bring_me_home
 - **Description**: Changes the working directory to the user's home directory.
-- **Command Used**:  cd ~
+- **Command Used**: cd ~
 
 ### 3-listfiles
 - **Description**: Displays the contents of the current directory in long format.
@@ -43,3 +43,8 @@ This directory contains scripts that perform basic shell operations. Each script
 ### 4-listmorefiles
 - **Description**: Displays the contents of the current directory, including hidden files, in long format.
 - **Command Used**: ls -la
+
+### 5-listfilesdigitonly
+- **Description**: Displays the contents of the current directory in long format, including hidden files, with numeric user and group IDs.
+- **Command Used**: ls -lan
+
