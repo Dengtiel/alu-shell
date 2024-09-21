@@ -69,4 +69,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Changes the working directory to the previous one.
 - **Command Used**: `cd -`
 
+### 11-lists
+- **Description**: Lists all files, including hidden ones, in the current directory, the parent directory, and the `/boot` directory, in long format.
+- **Command Used**: `ls -la . .. /boot`
+
 
