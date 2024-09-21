@@ -65,4 +65,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Deletes the directory `my_first_directory` from `/tmp/`.
 - **Command Used**: `rmdir /tmp/my_first_directory`
 
+### 10-back
+- **Description**: Changes the working directory to the previous one.
+- **Command Used**: `cd -`
+
 
