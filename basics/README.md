@@ -77,4 +77,7 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Prints the type of the file named `iamafile` located in the `/tmp` directory.
 - **Command Used**: `file /tmp/iamafile`
 
+### 13-symbolic_link
+- **Description**: Creates a symbolic link named `__ls__` that points to `/bin/ls` in the current directory.
+- **Command Used**: `ln -s /bin/ls __ls__`
 
