@@ -81,3 +81,7 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Creates a symbolic link named `__ls__` that points to `/bin/ls` in the current directory.
 - **Command Used**: `ln -s /bin/ls __ls__`
 
+### 14-copy_html
+- **Description**: Copies all `.html` files from the current directory to the parent directory if they are newer or don't exist in the parent directory.
+- **Command Used**: `cp -u *.html ..`
+
