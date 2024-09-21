@@ -89,4 +89,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Moves all files beginning with an uppercase letter to the directory `/tmp/u`.
 - **Command Used**: `mv [A-Z]* /tmp/u/`
 
+### 16-clean_emacs
+- **Description**: Deletes all files in the current directory that end with the character `~`.
+- **Command Used**: `rm *~`
+
 
