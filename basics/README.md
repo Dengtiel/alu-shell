@@ -93,4 +93,7 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Deletes all files in the current directory that end with the character `~`.
 - **Command Used**: `rm *~`
 
+### 17-tree
+- **Description**: Creates the directory structure `welcome/to/school` in the current directory.
+- **Command Used**: `mkdir -p welcome/to/school`
 
