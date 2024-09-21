@@ -85,3 +85,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Copies all `.html` files from the current directory to the parent directory if they are newer or don't exist in the parent directory.
 - **Command Used**: `cp -u *.html ..`
 
+### 15-lets_move
+- **Description**: Moves all files beginning with an uppercase letter to the directory `/tmp/u`.
+- **Command Used**: `mv [A-Z]* /tmp/u/`
+
+
