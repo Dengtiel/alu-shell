@@ -73,4 +73,8 @@ This directory contains scripts that perform basic shell operations. Each script
 - **Description**: Lists all files, including hidden ones, in the current directory, the parent directory, and the `/boot` directory, in long format.
 - **Command Used**: `ls -la . .. /boot`
 
+### 12-file_type
+- **Description**: Prints the type of the file named `iamafile` located in the `/tmp` directory.
+- **Command Used**: `file /tmp/iamafile`
+
 
