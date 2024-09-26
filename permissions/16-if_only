@@ -1,2 +1,2 @@
 #!/bin/bash
-chown --from=guillaume vincent hello && echo "Changed owner of hello to vincent" || echo "Owner of hello is not guillaume, no changes made"
+ chown --from=guillaume vincent hello
