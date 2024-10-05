@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -print | while read -r file; do printf "%s\n" "${file##*/}"; done
+find . -empty -printf "%f\n"
