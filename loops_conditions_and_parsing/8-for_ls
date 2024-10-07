@@ -1,35 +1,10 @@
 #!/usr/bin/env bash
-# This script creates expected files in the specified directory and then displays the part of the names after the first dash.
-
-# Directory where you want to create the files
-TARGET_DIR="./your_target_directory"
-
-# Create the target directory if it doesn't exist
-mkdir -p "$TARGET_DIR"
-
-# List of expected files to create
-expected_files=(
-    "file_0-sample"
-    "file_1-test"
-    "file_2-sample"
-    "file_3-test"
-    "file_4-hidden"
-)
-
-# Loop through the list and create each file
-for file in "${expected_files[@]}"; do
-    touch "$TARGET_DIR/$file"
-done
-
-echo "Expected files created in $TARGET_DIR."
+# This script displays the content of the current directory, showing only the part of the name after the first dash.
 
 # Initialize an empty array to hold the valid filenames
 filenames=()
 
-# Change to the target directory to list the files
-cd "$TARGET_DIR" || exit 1  # Exit if the directory change fails
-
-# Loop through all files in the target directory with a dash in the name
+# Loop through all files in the current directory
 for file in *-*; do
     # Check if the file exists and is not a hidden file
     if [ -e "$file" ] && [[ ! "$file" == .* ]]; then
@@ -40,7 +15,6 @@ for file in *-*; do
 done
 
 # Print each valid filename on a new line
-echo "Formatted file names:"
 for name in "${filenames[@]}"; do
     echo "$name"
 done
