@@ -1,6 +1,5 @@
-#!/bin/bash
-#
-# Set the IFS to colon to split the fields correctly
+#!/usr/bin/env bash
+# 
 IFS=':'
 
 # Read the /etc/passwd file line by line
