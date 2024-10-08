@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# 
+#
 # Set the IFS to colon to split the fields correctly
 IFS=':'
 
