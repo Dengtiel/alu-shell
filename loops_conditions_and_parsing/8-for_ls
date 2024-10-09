@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script displays the content of the current directory, showing only the part of the name after the first dash.
+
+# Initialize an empty array to hold the valid filenames
+filenames=()
+
+# Loop through all files in the current directory
+for file in *-*; do
+    # Check if the file exists and is not a hidden file
+    if [ -e "$file" ] && [[ ! "$file" == .* ]]; then
+        # Get the part after the first dash
+        name="${file#*-}"
+        filenames+=("$name")  # Add the formatted name to the array
+    fi
+done
+
+# Print each valid filename on a new line
+for name in "${filenames[@]}"; do
+    echo "$name"
+done
