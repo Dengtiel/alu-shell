@@ -1,0 +1,2 @@
+#!/bin/bash
+eval "$(set)"; eval "$(declare -F)"
