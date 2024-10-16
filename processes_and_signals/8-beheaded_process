@@ -4,8 +4,8 @@
 # Get the PID of the 7-highlander process
 PID=$(pgrep -f "7-highlander")
 
+# If no process found, just exit
 if [ -z "$PID" ]; then
-  # No process found, exit with no output
   exit 0
 fi
 
@@ -17,9 +17,9 @@ sleep 2
 
 # Check if the process is still running
 if pgrep -f "7-highlander" > /dev/null; then
-  # Process is still running, exit with a non-zero status
+  # Process is still running
   exit 1
 else
-  # Process successfully terminated, print "OK" once
+  # Print "OK" once
   echo "OK"
 fi
