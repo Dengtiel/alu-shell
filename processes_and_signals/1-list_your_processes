@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script lists all currently running processes, including those without a TTY, in a user-oriented format with process hierarchy
 
-ps -eo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,command --sort=user --forest
+ps -eo user,pid,pcpu,pmem,vsz,rss,tty,stat,start_time,time,command --sort=user --forest
