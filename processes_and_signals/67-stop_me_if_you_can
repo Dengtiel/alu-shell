@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# 67-stop_me_if_you_can
+
+# Get the PID of the 7-highlander process
+pid=$(pgrep -f "7-highlander")
+
+# Check if the process is running
+if [ -n "$pid" ]; then
+    # Terminate the process
+    echo "Stopping process $pid..."
+    kill -SIGTERM "$pid" 2>/dev/null
+else
+    echo "No running process found for 7-highlander."
+fi
+#!/usr/bin/env bash
+# 67-stop_me_if_you_can
+
+# Get the PID of the 7-highlander process
+pid=$(pgrep -f "7-highlander")
+
+# Check if the process is running
+if [ -n "$pid" ]; then
+    # Terminate the process
+    echo "Stopping process $pid..."
+    kill -SIGTERM "$pid" 2>/dev/null
+else
+    echo "No running process found for 7-highlander."
+fi
+
