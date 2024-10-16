@@ -3,7 +3,7 @@
 
 for pid in /proc/[0-9]*; do
     if [ -d "$pid" ]; then
-        cmdline=$(cat "$pid/cmdline" 2>/dev/null | tr '\0' ' ') # Read the command line
+        cmdline=$(tr '\0' ' ' < "$pid/cmdline" 2>/dev/null) # Read the command line without cat
         if [[ "$cmdline" == *bash* ]]; then
             echo "$(basename "$pid") $cmdline"
         fi
