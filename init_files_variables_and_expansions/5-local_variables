@@ -1,2 +1,2 @@
 #!/bin/bash
-eval "$(set)"; eval "$(declare -F)"
+set | grep -v '^declare ' | grep -v '^_='
