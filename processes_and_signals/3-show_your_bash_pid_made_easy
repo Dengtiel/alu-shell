@@ -3,9 +3,10 @@
 
 for pid in /proc/[0-9]*; do
     if [ -d "$pid" ]; then
-        cmdline=$(tr '\0' ' ' < "$pid/cmdline" 2>/dev/null) # Read the command line without cat
+        cmdline=$(tr '\0' ' ' < "$pid/cmdline" 2>/dev/null) # Read the command line
         if [[ "$cmdline" == *bash* ]]; then
-            echo "$(basename "$pid") $cmdline"
+            exe_path=$(readlink -f "$pid/exe") # Get the full path to the executable
+            echo "$(basename "$pid") $exe_path" # Output PID and executable path
         fi
     fi
 done
