@@ -6,9 +6,16 @@ pid=$(pgrep -f "7-highlander")
 
 # Check if the process is running
 if [ -n "$pid" ]; then
-    # Kill the process
+    # Forcefully kill the process using SIGKILL (-9)
     echo "Killing process $pid..."
-    kill "$pid" 2>/dev/null
+    kill -9 "$pid" 2>/dev/null
+    
+    # Confirm if the process is killed
+    if ! ps -p "$pid" > /dev/null; then
+        echo "Process $pid has been terminated."
+    else
+        echo "./7-highlander is still running"
+    fi
 else
     echo "No running process found for 7-highlander."
 fi
