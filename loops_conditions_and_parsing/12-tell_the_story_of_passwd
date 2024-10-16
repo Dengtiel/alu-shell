@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# This script displays the username, user id, and home directory path for users from /etc/passwd
+# This script reads and formats user information from /etc/passwd
 
-# Read the contents of /etc/passwd line by line
-while IFS=: read -r username _ userid _ home_directory _; do
-    echo "$username:$userid:$home_directory"
+# Set IFS to ':' to split fields in /etc/passwd
+IFS=":"
+
+# Read each line of /etc/passwd
+while read -r username password uid gid comment home shell; do
+  # Display the formatted output
+  echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $comment"
 done < /etc/passwd
