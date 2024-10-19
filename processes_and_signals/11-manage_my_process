@@ -5,36 +5,39 @@ PIDFILE="/var/run/my_process.pid"
 
 start() {
     if [ -f "$PIDFILE" ]; then
-        echo "manage_my_process is already running."
-        exit 1
+        return 1  # Indicate that the process is already running
     fi
     
     ./manage_my_process &           # Ensure this path is correct
     echo $! > "$PIDFILE"           # Store the PID
-    echo "manage_my_process started"
 }
 
 stop() {
     if [ -f "$PIDFILE" ]; then
         kill "$(cat "$PIDFILE")" && rm -f "$PIDFILE"  # Quote the command substitution
-        echo "manage_my_process stopped"
-    else
-        echo "manage_my_process is not running."
     fi
 }
 
 restart() {
-    stop
-    start
+    stop > /dev/null 2>&1  # Suppress output
+    start > /dev/null 2>&1  # Suppress output
     echo "manage_my_process restarted"
 }
 
 case "$1" in
     start)
-        start
+        if start; then
+            echo "manage_my_process started"
+        else
+            echo "manage_my_process is already running."
+        fi
         ;;
     stop)
-        stop
+        if stop; then
+            echo "manage_my_process stopped"
+        else
+            echo "manage_my_process is not running."
+        fi
         ;;
     restart)
         restart
@@ -43,4 +46,3 @@ case "$1" in
         echo "Usage: manage_my_process {start|stop|restart}"
         ;;
 esac
-
