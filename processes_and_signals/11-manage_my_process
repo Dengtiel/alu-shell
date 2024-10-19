@@ -8,19 +8,20 @@ start() {
         return 1  # Indicate that the process is already running
     fi
     
-    ./manage_my_process &           # Ensure this path is correct
-    echo $! > "$PIDFILE"           # Store the PID
+    # Start the manage_my_process in the background
+    /path/to/manage_my_process &  # Update this path accordingly
+    echo $! > "$PIDFILE"          # Store the PID
 }
 
 stop() {
     if [ -f "$PIDFILE" ]; then
-        kill "$(cat "$PIDFILE")" && rm -f "$PIDFILE"  # Quote the command substitution
+        kill "$(cat "$PIDFILE")" && rm -f "$PIDFILE"  # Quote to prevent word splitting
     fi
 }
 
 restart() {
-    stop > /dev/null 2>&1  # Suppress output
-    start > /dev/null 2>&1  # Suppress output
+    stop > /dev/null 2>&1  # Suppress output from stop
+    start > /dev/null 2>&1  # Suppress output from start
     echo "manage_my_process restarted"
 }
 
